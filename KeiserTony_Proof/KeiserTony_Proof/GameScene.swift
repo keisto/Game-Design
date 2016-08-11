@@ -70,8 +70,6 @@ class GameScene: SKScene {
         touchPoint = touches.first!.locationInNode(self)
     }
 
-    
-   
     override func update(currentTime: CFTimeInterval) {
         // Set Player's Rotation to Angle of touchPoint
         let touchPercent = touchPoint.x / size.width
