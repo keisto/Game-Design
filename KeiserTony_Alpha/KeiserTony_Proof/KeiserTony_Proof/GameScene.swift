@@ -12,6 +12,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player:SKSpriteNode!
     var zombieA:SKSpriteNode!
     var zombieB:SKSpriteNode!
+    var pauseButton:SKSpriteNode!
     var touchPoint:CGPoint = CGPointZero
     // Category Mask(s)
     let bulletMask:UInt32 = 0x1 >> 0; // 1
@@ -23,6 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player = self.childNodeWithName("player") as! SKSpriteNode
         zombieA = self.childNodeWithName("zombie1") as! SKSpriteNode
         zombieB = self.childNodeWithName("zombie2") as! SKSpriteNode
+        pauseButton = self.childNodeWithName("pauseButton") as! SKSpriteNode
         self.physicsWorld.contactDelegate = self
         // Player Collision should only be with a Zombie
         player.physicsBody?.collisionBitMask = zombieMask
@@ -57,6 +59,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if !player.containsPoint(touchPoint) {
             // Play Prepared Sound on Touch
             self.runAction(SKAction.playSoundFileNamed("gunfire.wav", waitForCompletion: false))
+        }
+        
+        // If Pause Button is touched 
+        if pauseButton.containsPoint(touchPoint) {
+            let pauseOverlay:SKSpriteNode = SKScene(fileNamed: "Pause")!
+                .childNodeWithName("pauseOverlay")! as! SKSpriteNode
+            pauseOverlay.removeFromParent()
+            self.addChild(pauseOverlay)
+            pauseOverlay.zPosition = 10
+            pauseOverlay.position.x = size.width / 2
+            pauseOverlay.position.y = size.height / 2
+            scene!.view!.paused = true
         }
     }
     

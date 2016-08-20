@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01633641D66927B005C58A6 /* Pause.sks in Resources */ = {isa = PBXBuildFile; fileRef = B01633631D66927B005C58A6 /* Pause.sks */; };
+		B01633691D669304005C58A6 /* Conclusion.sks in Resources */ = {isa = PBXBuildFile; fileRef = B01633681D669304005C58A6 /* Conclusion.sks */; };
 		B08210EA1D5D16690021E7D0 /* pain.wav in Resources */ = {isa = PBXBuildFile; fileRef = B08210E91D5D16690021E7D0 /* pain.wav */; };
 		B08210EC1D5D30100021E7D0 /* Bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = B08210EB1D5D30100021E7D0 /* Bullet.sks */; };
 		B0D2BF041D51CF2B003E679F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2BF031D51CF2B003E679F /* AppDelegate.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01633631D66927B005C58A6 /* Pause.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Pause.sks; sourceTree = "<group>"; };
+		B01633681D669304005C58A6 /* Conclusion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Conclusion.sks; sourceTree = "<group>"; };
 		B08210E91D5D16690021E7D0 /* pain.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pain.wav; sourceTree = "<group>"; };
 		B08210EB1D5D30100021E7D0 /* Bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bullet.sks; sourceTree = "<group>"; };
 		B0D2BF001D51CF2A003E679F /* KeiserTony_Proof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeiserTony_Proof.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +65,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01633611D66870F005C58A6 /* SKScenes */ = {
+			isa = PBXGroup;
+			children = (
+				B0D2BF051D51CF2C003E679F /* GameScene.sks */,
+				B016336A1D669923005C58A6 /* Overlays */,
+				B01633651D66928A005C58A6 /* Addons */,
+			);
+			name = SKScenes;
+			sourceTree = "<group>";
+		};
+		B01633651D66928A005C58A6 /* Addons */ = {
+			isa = PBXGroup;
+			children = (
+				B08210EB1D5D30100021E7D0 /* Bullet.sks */,
+			);
+			name = Addons;
+			sourceTree = "<group>";
+		};
+		B016336A1D669923005C58A6 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				B01633631D66927B005C58A6 /* Pause.sks */,
+				B01633681D669304005C58A6 /* Conclusion.sks */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
 		B0D2BEF71D51CF29003E679F = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D2BF031D51CF2B003E679F /* AppDelegate.swift */,
-				B0D2BF051D51CF2C003E679F /* GameScene.sks */,
-				B08210EB1D5D30100021E7D0 /* Bullet.sks */,
+				B01633611D66870F005C58A6 /* SKScenes */,
 				B0D2BF071D51CF2C003E679F /* GameScene.swift */,
 				B0D2BF091D51CF2C003E679F /* GameViewController.swift */,
 				B0D2BF1A1D53034A003E679F /* Sounds */,
@@ -176,9 +206,11 @@
 				B0D2BF121D51CF2C003E679F /* LaunchScreen.storyboard in Resources */,
 				B0D2BF281D53CC3D003E679F /* sniperchamber.wav in Resources */,
 				B0D2BF0F1D51CF2C003E679F /* Assets.xcassets in Resources */,
+				B01633691D669304005C58A6 /* Conclusion.sks in Resources */,
 				B0D2BF1E1D53BFD3003E679F /* zombie1.wav in Resources */,
 				B0D2BF0D1D51CF2C003E679F /* Main.storyboard in Resources */,
 				B0D2BF2A1D53CC46003E679F /* gunfire.wav in Resources */,
+				B01633641D66927B005C58A6 /* Pause.sks in Resources */,
 				B0D2BF2C1D53CCC1003E679F /* explode.wav in Resources */,
 				B08210EC1D5D30100021E7D0 /* Bullet.sks in Resources */,
 				B0D2BF261D53CC3D003E679F /* loadmag.wav in Resources */,
